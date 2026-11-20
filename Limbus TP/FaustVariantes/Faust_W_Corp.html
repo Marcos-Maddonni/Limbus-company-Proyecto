@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faust W Corp</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<main class="ficha">
+
+  <!-- ================= COLUMNA IZQUIERDA ================= -->
+  <section class="col">
+
+    <div class="arte">
+      <!-- Cambiá las dos imágenes: la 1ª es la que se ve, la 2ª aparece con "Cambiar arte" -->
+      <img id="arte-img" src="../Assets/IMG/W_CORP FAUST.webp"
+           data-arte1="../Assets/IMG/W_CORP FAUST.webp"
+           data-arte2="../Assets/IMG/W_CORP FAUST2.webp"
+           alt="Arte de la variante">
+    </div>
+
+    <div class="tabs" role="tablist" data-grupo="izq">
+      <button class="tab" role="tab" aria-selected="true"  data-panel="p-info">Información</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="p-cordura">Cordura</button>
+      <button class="btn-arte" id="btn-arte" type="button">Cambiar arte</button>
+    </div>
+
+    <!-- Pestaña: Información -->
+    <div class="panel" id="p-info">
+      <div class="barra">Info</div>
+      <div class="tabla c4">
+        <div class="et">Rareza</div><div class="oro">★★</div>
+        <div class="et">Mundo</div><div>Mundo de W Corp</div>
+        <div class="et">Temporada</div><div class="oro">Banner Normal</div>
+        <div class="et">Lanzamiento</div><div>27 de febrero de 2023</div>
+        <div class="et">Rasgos</div>
+        <div class="ancho"><span class="tag">W Corp</span></div>
+      </div>
+
+      <div class="barra">Estado</div>
+      <div class="tabla c6">
+        <div class="et">PV</div><div>273</div>
+        <div class="et">Vel.</div><div>2~4</div>
+        <div class="et">Def.</div><div>66</div>
+      </div>
+
+      <div class="barra">Umbrales de aturdimiento</div>
+      <div class="umbral"><span class="oro">60% (172)</span> - <span style="color:#ff6a5a">30% (86)</span> - <span style="color:#5ccbb8">15% (41)</span><center><img src="../Assets/IMG/vida.webp" alt=""></center></div>
+
+      <div class="barra">Resistencias</div>
+      <div class="tabla c3">
+        <div class="et">Corte</div><div class="et">Perforación</div><div class="et">Contundente</div>
+        <div class="res normal">Fatal<small>[x2]</small></div>
+        <div class="res inef">Ineficaz<small>[x0.5]</small></div>
+        <div class="res fatal">Normal<small>[x1]</small></div>
+      </div>
+    </div>
+
+    <!-- Pestaña: Cordura -->
+    <div class="panel" id="p-cordura" hidden>
+      <div class="barra">Cordura</div>
+      <div class="tabla c4">
+        <div class="et">Mínima</div><div>-45</div>
+        <div class="et">Máxima</div><div>45</div>
+      </div>
+      <div class="barra">Factores</div>
+      <div style="padding:10px"><span style="border:2px solid rgba(128, 201, 255, 0.5); padding:3px 5% 3px 5%"><b>Factores Base para incrementar la cordura</b></span>
+    <li>incrementa la cordura dependiendo del choque basado en el contador de choque (clash) Valor base es 10 incrementado en 20% por cada contador de clash despues de 1</li>
+    <li>Aumenta en 10 después de que esta unidad derrote a un enemigo cuyo nivel fuera igual o superior al de esta unidad.</li>
+    <li>Aumenta en 5 después de que un aliado derrote a un enemigo cuyo nivel fuera igual o superior al de la unidad.</li>
+    <li>niveles negativos proximamente...</li>
+</div>
+
+    </div>
+  </section>
+
+  <!-- ================= COLUMNA DERECHA ================= -->
+  <section class="col">
+
+    <div class="barra">Habilidades</div>
+    <div class="tabs" role="tablist" data-grupo="hab">
+      <button class="tab" role="tab" aria-selected="true"  data-panel="h1">Habilidad 1</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="h2">Habilidad 2</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="h3">Habilidad 3</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="hd">Defensa</button>
+    </div>
+
+    <!-- Copiá este bloque .hab para cada habilidad -->
+    <div class="panel" id="h1">
+      <div class="hab">
+        <div class="hab__icono"><img src="../Assets/IMG/Ciclo de energia.webp" alt="" width="" height=""></div>
+        <div>
+          <img src="../Assets/IMG/Moneda.webp" alt="" width="25px" height="25px">
+          <span class="hab__nombre">Corte hacia abajo</span>
+          <p class="hab__datos">
+            <span class="oro">Peso de ataque: 64 (65-1) <img src="../Assets/IMG/Blunt.webp" alt="" width="25px" height="25px"></span><br>
+            Cantidad: x3<br>
+            <span class="theme-adapt" style="color: greenyellow;">[Al usar]</span> gana +2 contador de cargas
+            <br> <span class="theme-adapt" style="color: greenyellow;">[Al pegar]</span> gana +2 de contador de cargas
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="panel" id="h2" hidden>
+      <div class="hab">
+        <div class="hab__icono"><img src="../Assets/IMG/Salto Largo.webp" alt="" width="100px"></div>
+        <div>
+            <div style="display: flex; flex-wrap: nowrap; gap: 1px;">
+                <img src="../Assets/IMG/Moneda.webp" alt="" width="25px" height="25px">
+                <img src="../Assets/IMG/Moneda.webp" alt="" width="25px" height="25px">
+            </div>
+          <span class="hab__nombre">Salto largo</span><p class="hab__datos">
+          <span class="oro">Peso de ataque: 65 (65+0) <img src="../Assets/IMG/Blunt.webp" alt="" width="25px" height="25px"></span><br>
+        </p>
+        <br>Cantidad: 2
+        <br><span class="theme-adapt" style="color: greenyellow">[Al usar]</span> Gana 3 cargas.
+        <br><span class="theme-adapt" style="color: greenyellow">[Al pegar]</span> Gana +3 cargas
+        <br><span class="theme-adapt" style="color: greenyellow">[Al pegar 2da moneda]</span> consume 3 cargas y inflinge 3 de atado.
+    </div></div>
+    </div>
+    <div class="panel" id="h3" hidden>
+      <div class="hab">
+        <div class="hab__icono"><img src="../Assets/IMG/SobreCarga.webp" alt="" width="100px"></div>
+        <div>
+            <div style="display: flex; flex-wrap: nowrap; gap: 1px;">
+                <img src="../Assets/IMG/Moneda.webp" alt="" width="25px" height="25px">
+                <img src="../Assets/IMG/Moneda.webp" alt="" width="25px" height="25px">
+                <img src="../Assets/IMG/Moneda.webp" alt="" width="25px" height="25px">
+            </div>
+          <span class="hab__nombre">Apuñalada taladro</span><p class="hab__datos"></p>
+          <span class="oro">Peso de ataque: 64 (65-1) <img src="../Assets/IMG/Blunt.webp" alt="" width="25px" height="25px"></span>
+                  <br>Cantidad: 1
+        <br>
+        Al tener +5 de cargas, Clash Power +2
+        <br> 
+        <span class="theme-adapt" style="color: greenyellow;">[Al golpear con la 3da]</span> consume 5 cargas para inflingir 2 de "poder de ataque abajo"
+        y 3 de parilisis el siguiente turno
+
+        </div></div>
+    </div>
+    <div class="panel" id="hd" hidden>
+      <div class="hab"><div class="hab__icono"><img src="../Assets/IMG/Defensa Wcorp.webp" alt="" width="100px"></div>
+        <div><span class="hab__nombre">Guardia</span><p class="hab__datos"> <span> <img src="../Assets/IMG/skill defensiva.webp" alt="">67 (65+2)</p></span></div></div>
+    </div>
+
+    <div class="barra">Pasiva de combate</div>
+    <div class="pasiva">
+      <span class="pasiva__nombre">Auto Cargarse</span>
+      <div class="pasiva__res"><img src="../Assets/IMG/envidia.webp" alt="" width="25px" height="25px">× 4 Res</div>
+      <div>gana +1 de cargas al terminar el ataque y un aliado cualquiera gana 1 de carga.</div>
+    </div>
+
+    <div class="barra">Pasiva de apoyo</div>
+    <div class="pasiva">
+      <span class="pasiva__nombre">Radio comunicacion</span>
+      <div class="pasiva__res"><img src="../Assets/IMG/envidia.webp" alt="" width="25px" height="25px">× 3 Res</div>
+      <div>el aliado con mayor cantidad de vida maxima gana 1 carga</div>
+    </div>
+  </section>
+
+  <a href="../Paginas/Faust.html" class="sinner-mini-link current">02 · Faust</a>
+</main>
+
+<script>
+  // Pestañas: cada grupo (.tabs) muestra solo el panel de la pestaña elegida
+  document.querySelectorAll('.tabs[role="tablist"]').forEach(function (grupo) {
+    var tabs = grupo.querySelectorAll('.tab');
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) {
+          var activa = t === tab;
+          t.setAttribute('aria-selected', activa);
+          document.getElementById(t.dataset.panel).hidden = !activa;
+        });
+      });
+    });
+  });
+
+  // Botón Cambiar arte
+  (function () {
+    var img = document.getElementById('arte-img');
+    var btn = document.getElementById('btn-arte');
+    var actual = 1;
+    btn.addEventListener('click', function () {
+      actual = actual === 1 ? 2 : 1;
+      img.src = img.dataset['arte' + actual];
+    });
+  })();
+</script>
+</body>
+</html>
