@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Firefist Gregor</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<main class="ficha">
+
+  <!-- ================= COLUMNA IZQUIERDA ================= -->
+  <section class="col">
+
+    <div class="arte">
+      <!-- Cambiá las dos imágenes: la 1ª es la que se ve, la 2ª aparece con "Cambiar arte" -->
+      <img id="arte-img" src="../Assets/IMG/Gregor base imagen 1.webp"
+           data-arte1="../Assets/IMG/Gregor base imagen 1.webp"
+           data-arte2="../Assets/IMG/Gregor base imagen 1.webp"
+           alt="Arte de la variante">
+    </div>
+
+    <div class="tabs" role="tablist" data-grupo="izq">
+      <button class="tab" role="tab" aria-selected="true"  data-panel="p-info">Información</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="p-cordura">Cordura</button>
+    </div>
+
+    <!-- Pestaña: Información -->
+    <div class="panel" id="p-info">
+      <div class="barra">Info</div>
+      <div class="tabla c4">
+        <div class="et">Rareza</div><div class="oro">★★★</div>
+        <div class="et">Mundo</div><div>N/A</div>
+        <div class="et">Temporada</div><div class="oro">Season 5 - Oblivion</div>
+        <div class="et">Lanzamiento</div><div>2025.03.06</div>
+        <div class="et">Rasgos</div>
+        <div class="ancho"><span class="tag">Fixer</span><span class="tag">Firefist Office</span></div>
+      </div>
+
+      <div class="barra">Estado</div>
+      <div class="tabla c6">
+        <div class="et">PV</div><div>274</div>
+        <div class="et">Vel.</div><div>4~6</div>
+        <div class="et">Def.</div><div>68</div>
+      </div>
+
+      <div class="barra">Umbrales de aturdimiento</div>
+      <div class="umbral"><span class="oro">70% (193)</span> - <span style="color:#ff6a5a">0% (0)</span> <center><img src="../Assets/IMG/vida.webp" alt=""></center></div>
+
+      <div class="barra">Resistencias</div>
+      <div class="tabla c3">
+        <div class="et">Corte</div><div class="et">Perforación</div><div class="et">Contundente</div>
+        <div class="res normal">Ineficaz<small>[x0.5]</small></div>
+        <div class="res inef">Fatal<small>[x2]</small></div>
+        <div class="res fatal">Normal<small>[x1]</small></div>
+      </div>
+    </div>
+
+    <!-- Pestaña: Cordura -->
+    <div class="panel" id="p-cordura" hidden>
+      <div class="barra">Cordura</div>
+      <div class="tabla c4">
+        <div class="et">Mínima</div><div>-45</div>
+        <div class="et">Máxima</div><div>45</div>
+      </div>
+      <div class="barra">Factores</div>
+      <div style="padding:10px"><span style="border:2px solid rgba(128, 201, 255, 0.5); padding:3px 5% 3px 5%"><b>Factores Base para incrementar la cordura</b></span>
+    <li>incrementa la cordura dependiendo del choque basado en el contador de choque (clash) Valor base es 10 incrementado en 20% por cada contador de clash despues de 1</li>
+    <li>Aumenta en 10 después de que esta unidad derrote a un enemigo cuyo nivel fuera igual o superior al de esta unidad.</li>
+    <li>Aumenta en 5 después de que un aliado derrote a un enemigo cuyo nivel fuera igual o superior al de la unidad.</li>
+    <li>niveles negativos proximamente...</li>
+</div>
+
+    </div>
+  </section>
+
+  <!-- ================= COLUMNA DERECHA ================= -->
+  <section class="col">
+
+    <div class="barra">Habilidades</div>
+    <div class="tabs" role="tablist" data-grupo="hab">
+      <button class="tab" role="tab" aria-selected="true"  data-panel="h1">Habilidad 1</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="h2">Habilidad 2</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="h3">Habilidad 3</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="hd">Defensa</button>
+    </div>
+
+    <!-- Copiá este bloque .hab para cada habilidad -->
+    <div class="panel" id="h1">
+      <div class="hab">
+        <div class="hab__icono"><img src="../Assets/IMG/Gregor base Habilidad 1.webp" alt="" width="100px" height=""></div>
+        <div>
+          <img src="../Assets/IMG/Moneda.webp" alt="" width="25px" height="25px">
+          <span class="hab__nombre">Lanzallamas</span>
+          <p class="hab__datos">
+            <span class="oro">Peso de ataque: 67 (65+2) <img src="../Assets/IMG/Slash.webp" alt="" width="25px" height="25px"></span><br>
+            Cantidad: x3<br>
+            Poder de la moneda +1 por cada 3 de Burn en el objetivo (maximo 2)
+            <br>
+            <span class="theme-adapt" style="color: greenyellow;">[Al golpear]</span> inflinge 3 de Burn
+            <br>
+            <span class="theme-adapt" style="color: greenyellow;">[Al golpear]</span> Consume 15 de Combustime del Distrito 12 e inflinge +2 Burn contador
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="panel" id="h2" hidden>
+      <div class="hab">
+        <div class="hab__icono"><img src="../Assets/IMG/Gregor base Habilidad 2.webp" alt="" width="100px"></div>
+        <div>
+          <img src="../Assets/IMG/Moneda.webp" alt="" width="25px" height="25px">
+          <span class="hab__nombre">Quemare hasta el ultimo de ustedes</span><p class="hab__datos">
+          <span class="oro">Peso de ataque: 68 (65+3) <img src="../Assets/IMG/Pierce.webp" alt="" width="25px" height="25px"></span><br>
+        </p>
+        <br>Cantidad: 2
+        <br>
+        Poder de la moneda +1 por cada 6 de Burn en el objetivo (maximo 2)
+        <br>
+        Las monedas que consumieron el "Combustible del Distrito 12" hacen 15% mas de daño
+        <br>
+        -Si esta en el estado de "Combustible Sobrecalentado" hace 30% mas de daño en su lugar
+        <br>
+        <span class="theme-adapt" style="color: greenyellow">[Al golpear]</span> inflinge +2 de Burn
+        <br>
+        <span class="theme-adapt" style="color: greenyellow">[Al golpear]</span> Consume 10 de "Combustible del distrito 12" e inflinge 2 de Burn contra los enemigos con menor cantidad de Potencia de Burn 
+        <br>
+        <span class="theme-adapt" style="color: greenyellow">[Al golpear]</span> inflinge +2 de Burn contador
+        <br>
+        <span class="theme-adapt" style="color: greenyellow">[Al golpear]</span> Consume 10 de "Combustible del distrito 12" e inflinge 2 de Burn contra los enemigos con menor cantidad de Potencia de Burn 
+        <br> 
+          </div></div>
+    </div>
+    <div class="panel" id="h3" hidden>
+      <div class="hab">
+        <div class="hab__icono"><img src="../Assets/IMG/Gregor base Habilidad 3.webp" alt="" width="100px"></div>
+        <div>
+            <div style="display: flex; flex-wrap: nowrap; gap: 1px;">
+                <img src="../Assets/IMG/Moneda.webp" alt="" width="25px" height="25px">
+                <img src="../Assets/IMG/Moneda.webp" alt="" width="25px" height="25px">
+                </div>
+          <span class="hab__nombre">Puño de fuego</span><p class="hab__datos"></p>
+          <span class="oro">Peso de ataque: 70 (65+5) <img src="../Assets/IMG/Pierce.webp" alt="" width="25px" height="25px"></span>
+            Cantidad: 1
+        <br>
+        Poder de la moneda +1 por cada 3 de Burn contador en el objetivo (Maximo 2)
+        <br>
+        <span class="theme-adapt" style="color: rgb(47, 130, 255)">[Al Usarse]</span> Poder base +1 por cada 6 de Burn en el objetivo (maximo 3)
+        <br>
+        <span class="theme-adapt" style="color: rgb(47, 130, 255)">[Al Usarse]</span> Consume hasta 25 de "Combustible del Distrito 12" y hace +2% de daño por cada "Combustible del Distrito 12" consumido (Maximo 50%)
+        <br>
+        -Cuando esta en el estado de "Combustible Sobrecalentado", +4% de daño por cada "Combustible del Distrito 12" Consumido (Maximo 100%)
+        <br>
+        <span class="theme-adapt" style="color: cyan">[Al Terminar el ataque]</span> si el objetivo muere, o si esta habilidad consume "Combustible del Distrito 12", obtiene 2 de aumento de daño contundente el siguiente turno
+        <br>
+        <span class="theme-adapt" style="color: greenyellow">[Al golpear]</span> Si se uso el "Combustible del Distrito 12", inflinge 2 Burn y +1 Burn Contador
+        <br>
+        <span class="theme-adapt" style="color: greenyellow">[Al golpear]</span> Si se uso el "Combustible del Distrito 12", inflinge 2 Burn y +1 Burn Contador
+        <br>
+        <span class="theme-adapt" style="color: greenyellow">[Al golpear]</span> Hace +2% de daño por cada "Combustible del Distrito 12" Usado por esta habilidad (Maximo 50%)
+        <br>
+        -Si esta en el estado de "Combustible Sobrecalentado", hace +4% de daño por cada "Combustible del Distrito 12" usado (maximo 100%)
+        <br>
+        </div></div>
+    </div>
+    <div class="panel" id="hd" hidden>
+      <div class="hab"><div class="hab__icono"><img src="../Assets/IMG/Guardia_gregor.png" alt="" width="100px"></div>
+        <div><span class="hab__nombre">Defensa</span><p class="hab__datos"> <span> <img src="../Assets/IMG/skill defensiva.webp" alt="">65 (65+0)</p></span></div></div>
+    </div>
+
+    <div class="barra">Pasiva de combate</div>
+    <div class="pasiva">
+      <span class="pasiva__nombre">Soy el unico sobreviviente</span>
+      <div class="pasiva__res"><img src="../Assets/IMG/gloom.webp" alt="" width="25px" height="25px">× 3 Res</div>
+      <div>Hace +0.2% de daño por cada "Combustible del Distrito 12" y estado de </div>
+    </div>
+
+    <div class="barra">Pasiva de apoyo</div>
+    <div class="pasiva">
+      <span class="pasiva__nombre">Neutralizando Informacion</span>
+      <div class="pasiva__res"><img src="../Assets/IMG/gloom.webp" alt="" width="25px" height="25px">× 3 Owned</div>
+      <div>Al empezar la fase del combate, el aliado con menos HP se cura 5 HP</div>
+    </div>
+  </section>
+
+  <a href="../Paginas/Gregor.html" class="sinner-mini-link current">12 · Gregor</a>
+</main>
+
+<script>
+  // Pestañas: cada grupo (.tabs) muestra solo el panel de la pestaña elegida
+  document.querySelectorAll('.tabs[role="tablist"]').forEach(function (grupo) {
+    var tabs = grupo.querySelectorAll('.tab');
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) {
+          var activa = t === tab;
+          t.setAttribute('aria-selected', activa);
+          document.getElementById(t.dataset.panel).hidden = !activa;
+        });
+      });
+    });
+  });
+
+  // Botón Cambiar arte
+  (function () {
+    var img = document.getElementById('arte-img');
+    var btn = document.getElementById('btn-arte');
+    var actual = 1;
+    btn.addEventListener('click', function () {
+      actual = actual === 1 ? 2 : 1;
+      img.src = img.dataset['arte' + actual];
+    });
+  })();
+</script>
+</body>
+</html>
